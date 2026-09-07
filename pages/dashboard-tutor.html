@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creche Pet — Dashboard do Tutor</title>
+<link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body class="pagina-app">
+
+<header class="barra-superior">
+  <button class="logotipo-app" id="botao-logo"><img src="../src/logo.png" alt="Creche Pet"></button>
+  <div class="area-usuario">
+    <button class="botao-sino" id="botao-sino">
+      <img src="../src/icone-sino.png" alt="Notificações">
+      <div class="painel-notificacoes oculto" id="painel-notificacoes"><strong>Notificações</strong>Nenhuma novidade por enquanto.</div>
+    </button>
+    <span class="nome-usuario-atual" id="nome-usuario"></span>
+    <div class="avatar-usuario" id="avatar-usuario"></div>
+    <button class="botao-logout" id="botao-sair"><img src="../src/icone-sair.png" alt="Sair"></button>
+  </div>
+</header>
+
+<div class="area-conteudo fundo-patinhas">
+  <div class="container-largura">
+    <h1 class="titulo-secao" id="saudacao-dashboard">Olá!</h1>
+    <p class="subtitulo-secao">Bem-vindo à sua central de cuidados.</p>
+
+    <h3 class="titulo-lista">Meus Pets</h3>
+    <div class="grade-pets" id="grade-pets-dashboard"></div>
+
+    <h3 class="titulo-lista">Meus Agendamentos</h3>
+    <div id="lista-agendamentos-dashboard" style="margin-bottom:26px;"></div>
+
+    <div class="faixa-cta">
+      <div>
+        <h4>Encontre a creche ideal para o seu pet</h4>
+        <p>Veja as creches disponíveis e as vagas abertas.</p>
+      </div>
+      <a class="botao-primario" style="width:auto;padding:12px 22px;text-decoration:none;" href="creches.html">Ver creches disponíveis</a>
+    </div>
+  </div>
+</div>
+
+<script src="../js/armazenamento.js"></script>
+<script src="../js/aplicativo.js"></script>
+<script>iniciarPaginaDashboardTutor();</script>
+</body>
+</html>
