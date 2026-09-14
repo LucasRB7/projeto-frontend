@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creche Pet — Cadastrar Pet</title>
+<link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body class="pagina-app">
+
+<header class="barra-superior">
+  <button class="logotipo-app" id="botao-logo"><img src="../src/logo.png" alt="Creche Pet"></button>
+  <div class="area-usuario">
+    <button class="botao-sino" id="botao-sino">
+      <img src="../src/icone-sino.png" alt="Notificações">
+      <div class="painel-notificacoes oculto" id="painel-notificacoes"><strong>Notificações</strong>Nenhuma novidade por enquanto.</div>
+    </button>
+    <span class="nome-usuario-atual" id="nome-usuario"></span>
+    <div class="avatar-usuario" id="avatar-usuario"></div>
+    <button class="botao-logout" id="botao-sair"><img src="../src/icone-sair.png" alt="Sair"></button>
+  </div>
+</header>
+
+<div class="area-conteudo fundo-patinhas">
+  <div class="container-estreito">
+    <h1 class="titulo-secao">Cadastrar Pet</h1>
+    <p class="subtitulo-secao">Nome, raça, idade, castrado e vacinas.</p>
+    <div class="cartao-form-central">
+      <form id="formulario-pet" onsubmit="salvarPet(event)">
+        <div class="campo-formulario">
+          <label>Nome</label>
+          <input id="pet-nome" class="input-padrao" type="text" placeholder="Digite o nome do pet" required>
+        </div>
+        <div class="campo-formulario linha-dupla">
+          <div>
+            <label>Raça</label>
+            <input id="pet-raca" class="input-padrao" type="text" placeholder="Ex.: Golden Retriever" required>
+          </div>
+          <div>
+            <label>Idade</label>
+            <input id="pet-idade" class="input-padrao" type="text" placeholder="Ex.: 3 anos" required>
+          </div>
+        </div>
+        <div class="campo-formulario">
+          <label>Castrado?</label>
+          <div class="grupo-castrado">
+            <button type="button" class="opcao-castrado selecionado" id="opcao-castrado-sim" onclick="alternarCastrado(true)">Sim</button>
+            <button type="button" class="opcao-castrado" id="opcao-castrado-nao" onclick="alternarCastrado(false)">Não</button>
+          </div>
+        </div>
+        <div class="campo-formulario">
+          <label>Vacinas</label>
+          <div id="lista-vacinas-formulario"></div>
+          <button type="button" class="link-adicionar" onclick="adicionarLinhaVacina()">+ Adicionar vacina</button>
+        </div>
+        <button type="submit" class="botao-primario">Salvar Pet</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="../js/armazenamento.js"></script>
+<script src="../js/aplicativo.js"></script>
+<script>iniciarPaginaCadastrarPet();</script>
+</body>
+</html>
